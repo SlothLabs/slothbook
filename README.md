@@ -1,0 +1,2 @@
+# slothbook
+Web-based notebook.
