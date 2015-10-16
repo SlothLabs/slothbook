@@ -1,0 +1,13 @@
+language: java
+script: mvn package -Popenshift
+jdk:
+- oraclejdk8
+deploy:
+  provider: openshift
+  user: matthewcory1@gmail.com
+  password:
+    secure: BxPndk1xwldwvjWCjqG5/pOlILMtjwF5LjYw6W7BRh+GFgHJRH9G3PS8q5zmszb73NO4HyJY91+Sa46kjTyN9ap1BaoL4F+3l4VEhSOR0O6qXW/6QW0g3BrEkxat8R5tgKnF1xrR/TOlj4UO6IaQAXBjGQu5kdVCiG5teIkPMQFqTWbHRhTd5TD9betIK0r4nK02T5FIGuaq4e7NraIMm2WF2N/XT0wTJNEMF0xcL2VkdpoVQc/xtEv6uSHBvrDlsQe2jUf6TtnqxiUHDBGEA+XR/tD9Z3Pi7V8sNN2QtTkYEcvDZL6/UlJsZ7Wta4u4KWeeoUYJQPjk1lPg2xWbdfQy1yaTnjnYUXktnRuRXccZUQ3J6XpDtVeDInBpv7TizMuUHjT8II7WDHDrHoaeq575Vzs6uyCoj45J/3M0e4kvWYdODQIsidJvgn/T24z5xJKI2zXMbTHpPkpJhqd3wfsV9ihcfuKCoXD12Ze3wL2ph3exkElNMr9BRcE16IFO7c8X6/ZwPbgjGdk/eTnYYU9PDRVfFAYgRsszI9gWndpHnnGtleBngajDltOYryCB86YUFvsL1l0hMVZa0cDH04Pf3sHaXA+/GrZ1JCK2fHwcR04PVNMnCf1HUINuz88rk7pCOPlcNgP01mmcKrqo4YFCPibXQyI5qORpo+7C2ZQ=
+  app: slothbook
+  domain: slothbook-mcory.rhcloud.com
+  on:
+    repo: SlothLabs/slothbook
