@@ -11,3 +11,4 @@ deploy:
   domain: mcory
   on:
     repo: SlothLabs/slothbook
+    tags: true
