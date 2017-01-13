@@ -1,0 +1,40 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: 'SlothBook'
+paths:
+  /session:
+    post:
+      description: |
+        Creates a new `Session`.
+      responses:
+        '201':
+          description: Successfully authenticated.
+  /account:
+    get:
+      description: |
+        Gets `Account` information.
+      responses:
+        '200':
+          description: Successful
+  /notebook/{id}:
+    get:
+      description: |
+        Gets a single `Notebook` object.
+      parameters:
+        - in: path
+          name: id
+          type: string
+          required: true
+          description: |
+            The notebook id.
+      responses:
+        '200':
+          description: Successful
+  /notebooks:
+    get:
+      description: |
+        Gets a list of `Notebook` information.
+      responses: 
+        '200':
+          description: Successful

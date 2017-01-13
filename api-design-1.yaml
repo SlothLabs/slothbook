@@ -1,0 +1,29 @@
+/session:
+  - POST:
+      description: |
+        Creates a new session, returning session identification information used for authenticatable requests.
+/contacts:
+  - GET:
+      description: |
+        Gets a collection of contacts.
+        Each contact item has link information indicating all available actions, including disabled actions (that are marked as such).
+        For example, GET and PUT might be available, but DELETE is disabled from the contacts collection.
+        On the actual contact resource (mentioned below), DELETE would be enabled as a valid operation.
+        Does that make sense? No; no way to determine which actions are triggered from which page. DELETE is included unless disabled due to application state.
+        Maybe a particular item isn't editable for some reason, so it's PUT operation is disabled.
+  - POST:
+      description: |
+        Creates a new contact.
+/contact/{id}:
+  - GET:
+      description: |
+        Gets details of the specified contact.
+  - PUT:
+      description: |
+        Updates the data for the specified contact.
+  - DELETE:
+      description: |
+        Deletes the specified contact.
+  - PATCH:
+      description: |
+        Apply a patch (diff - set of operations) to the specified contact.
